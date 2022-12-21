@@ -1,0 +1,7 @@
+{
+  "name": "loginku",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
