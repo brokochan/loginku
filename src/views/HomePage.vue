@@ -1,28 +1,37 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
+    <ion-header :translucent="true" class="text-center">
+      <ion-toolbar color="primary">
+        <ion-title>Aplikasi Negova</ion-title>
       </ion-toolbar>
     </ion-header>
     
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    
       <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <strong>Sudah Punya Akun?</strong>
+        <p>Silahkan Login dibawah ini</p>
+        <p>
+          <br>
+          <ion-button href="/login">
+            Login
+          </ion-button>
+        </p>
+        <br>
+        <strong>Belum Punya Akun?</strong>
+        <p>Silahkan Daftar dibawah ini</p>
+        <p>
+          <br>
+          <ion-button href="/">
+            Daftar
+          </ion-button>
+        </p>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
@@ -32,7 +41,8 @@ export default defineComponent({
     IonHeader,
     IonPage,
     IonTitle,
-    IonToolbar
+    IonToolbar,
+    IonButton
   }
 });
 </script>
@@ -64,5 +74,13 @@ export default defineComponent({
 
 #container a {
   text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ion-button {
+  text-transform: none;
 }
 </style>
